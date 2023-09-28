@@ -1,0 +1,3 @@
+to apply all patches at once AND reduce chances of errors: 
+
+cat *.diff | patch  --verbose --ignore-whitespace --fuzz 3 -p1

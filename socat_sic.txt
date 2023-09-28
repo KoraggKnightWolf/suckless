@@ -1,0 +1,7 @@
+separate window/tab/whatever for each:
+
+socat UNIX-LISTEN:/tmp/sockettest,fork STDOUT
+
+#socat STDIN UNIX-CONNECT:/tmp/sockettest
+
+./sic -h localhost -n TestingUnit | socat STDIN UNIX-CONNECT:/tmp/sockettest <--- type in this one
